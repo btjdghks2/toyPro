@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class RestKakaoController {
 
-    @GetMapping("/")
+    @GetMapping("/api")
     public String home() {
         return null;
     }

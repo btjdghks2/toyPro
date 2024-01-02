@@ -12,6 +12,7 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "Users")
 public class User {
 
     @Id
@@ -22,7 +23,6 @@ public class User {
 
     private String email;
 
-    @OneToMany
-    @JoinColumn
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     private List<Friend> friend = new ArrayList<>();
 }
